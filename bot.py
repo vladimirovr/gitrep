@@ -14,14 +14,11 @@ RSI_OVERSOLD = 30
 TRADE_SYMBOL = 'ETHUSD'
 TRADE_QUANTITY = 0.01
 
-API_KEY = '51VWSoPwYC5pe0DimYUxdVHustgbWVXHPhOuexwVoTSBUVrjYENv64ptJMeYKCVK'
-SECRET_KEY = 'vJt1mc4tGsvTqcYXYSzdyOW9l8kOXdechwrXPru6dLQQtv8fFkQHHUg1fKuOwDAz'
-
 
 in_position = False
 closes = []
 
-client = Client(API_KEY, SECRET_KEY, tld='us')
+client = Client(config.API_KEY, config.SECRET_KEY, tld='us')
 
 
 def order(side, quantity, symbol, order_type=ORDER_TYPE_MARKET):
